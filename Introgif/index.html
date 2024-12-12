@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console Typewriter Effect</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace; /* Monospace for JSON/console look */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #1e1e1e; /* Dark background for the page */
+    }
+
+    .console-frame {
+      width: 80%; /* Adjust as needed */
+      max-width: 900px; /* Optional: limit max width */
+      background: #000;
+      border-radius: 8px; /* Rounded corners for the frame */
+      overflow: hidden; /* Clip content inside the rounded border */
+    }
+
+    .console-header {
+      background: #333;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .console-header .buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .console-header .button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ff5f56; /* Close button color */
+    }
+
+    .console-header .button:nth-child(2) {
+      background: #ffbd2e; /* Minimize button color */
+    }
+
+    .console-header .button:nth-child(3) {
+      background: #27c93f; /* Maximize button color */
+    }
+
+    .typewriter-container {
+      font-size: 1.5rem; /* Console-style font size */
+      width: 100%; /* Match frame width */
+      height: 400px; /* Adjust as needed */
+      overflow-y: scroll; /* Vertical scrolling */
+      border-top: 1px solid #444; /* Divider between header and content */
+      padding: 1rem;
+      color: #0f0; /* Green text color */
+      background: #000; /* Black console background */
+    }
+
+    /* Hide the scrollbar */
+    .typewriter-container::-webkit-scrollbar {
+      display: none; /* Hides scrollbar in WebKit-based browsers */
+    }
+    .typewriter-container {
+      scrollbar-width: none; /* Hides scrollbar in Firefox */
+    }
+
+    .cursor {
+      animation: blink 0.7s infinite;
+      color: #0f0; /* Match text color */
+    }
+
+    @keyframes blink {
+      0%, 50% {
+        opacity: 1;
+      }
+      50.01%, 100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="console-frame">
+    <div class="console-header">
+      <span>Console</span>
+      <div class="buttons">
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+      </div>
+    </div>
+    <div class="typewriter-container" id="typewriter-container">
+      <pre id="typewriter"></pre> <!-- Preformatted text for preserving line breaks -->
+      <span class="cursor">|</span>
+    </div>
+  </div>
+  <script>
+    const typewriterElement = document.getElementById("typewriter");
+    const typewriterContainer = document.getElementById("typewriter-container");
+    let jsonString = ""; // To store formatted JSON as a string
+    let currentCharIndex = 0;
+
+    // Fetch JSON data
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        jsonString = JSON.stringify(data, null, 2); // Pretty-print JSON with indents
+        typeJSON(); // Start the typewriter effect
+      })
+      .catch(error => console.error("Error loading JSON:", error));
+
+    function typeJSON() {
+      if (currentCharIndex < jsonString.length) {
+        const char = jsonString[currentCharIndex];
+        
+        // Add the next character to the console
+        typewriterElement.textContent += char;
+        currentCharIndex++;
+
+        // Auto-scroll to the bottom
+        typewriterContainer.scrollTop = typewriterContainer.scrollHeight;
+
+        setTimeout(typeJSON, 50); // Typing speed
+      } else {
+        console.log("Finished typing JSON!");
+      }
+    }
+  </script>
+</body>
+</html>

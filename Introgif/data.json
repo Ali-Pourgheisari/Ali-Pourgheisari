@@ -1,0 +1,41 @@
+{
+  "name": "Ali Pourgheisari",
+  "contact": {
+    "email": "alipourgheisari@gmail.com",
+    "linkedin": "https://linkedin.com/in/ali-pourgheisari",
+    "github": "https://github.com/Ali-Pourgheisari",
+    "location": "Isfahan, Iran"
+  },
+  "education": [
+    {
+      "degree": "Bachelor's in Computer Engineering",
+      "institution": "University of Isfahan",
+      "focus": ["Artificial Intelligence", "Software Engineering"]
+    }
+  ],
+  "skills": {
+    "programming_languages": ["Python", "C#", "C++", "SQL"],
+    "ml_frameworks_tools": ["OpenCV", "PyTorch", "Scikit-learn", "Pandas", "Matplotlib"],
+    "software_development": ["ASP.NET Core", "PyQt", "SQL Server", "Git", "HTML & CSS"],
+    "knowledge": [
+      "Digital Image Processing",
+      "Computer Vision",
+      "Machine Learning",
+      "Deep Learning",
+      "Object-Oriented Programming",
+      "Data Structures and Algorithms",
+      "Compiler Design",
+      "Operating Systems",
+      "Database Management Systems",
+      "Software Engineering"
+    ]
+  },
+  "interests": [
+    "Computer Vision",
+    "Augmented Reality",
+    "Quantum Computing",
+    "Autonomous Systems",
+    "Decision-Making Systems",
+    "Competitive Programming"
+  ]
+}
