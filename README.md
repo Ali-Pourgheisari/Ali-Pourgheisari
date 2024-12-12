@@ -9,9 +9,8 @@
 <h1></h1>
 <br>
 
-<img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="35">&nbsp;***About me***
+<img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 35>&nbsp;***About me***
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
 **"Innovative Computer Engineer interested in Artificial Intelligence and Software Development."**
 
 I am a passionate computer engineer with a strong foundation in programming, AI, and software development. With a Bachelor's degree from the University of Isfahan, I have cultivated expertise in machine learning, computer vision, and advanced programming. My academic journey and hands-on experiences, including impactful projects, have equipped me with the skills to design intelligent systems that solve real-world challenges.
