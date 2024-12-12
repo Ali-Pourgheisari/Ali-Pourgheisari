@@ -3,10 +3,9 @@
 <div>
     <img src="./Introgif/GitHubIntro.gif" alt="About Me Terminal GIF"/>
 </div>
+<br>
 
 <img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 35>&nbsp;***About me***
-
-<br>
 
 **"Innovative Computer Engineer interested in Artificial Intelligence and Software Development."**
 
